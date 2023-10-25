@@ -1,0 +1,14 @@
+services:
+  service1:
+    image: service1
+    container_name: service1.com
+  service2:
+    image: service2
+    container_name: service2.com
+  gateway:
+    image: gateway
+    ports:
+      - "8080:8080"
+    depends_on:
+      - service1
+      - service2
